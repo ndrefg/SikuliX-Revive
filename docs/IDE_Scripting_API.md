@@ -51,7 +51,7 @@ These functions are used to locate images or patterns on the screen.
         click(login_button)
     except FindFailed:
         print "Login form did not appear in time."
-    
+
     wait(5) # Pauses the script for 5 seconds
     ```
 
@@ -84,7 +84,7 @@ These functions are used to locate images or patterns on the screen.
         print "No error message."
     ```
 
-**`has(target, timeout=0)`** 
+**`has(target, timeout=0)`**
 *   **Description:** Similar to `exists`, but returns a boolean. Checks if the target appears within the specified time. Does not raise `FindFailed`.
 *   **Parameters:**
     *   `target`: A string (image path), `Pattern` object, or `Image` object.
@@ -110,7 +110,7 @@ These functions simulate mouse interactions. Targets can be image strings, `Patt
     ```python
     click("button.png")
     click(match_object)
-    click(region_object.getCenter()) 
+    click(region_object.getCenter())
     click("settings.png", Key.SHIFT) # Shift-click
     ```
 
@@ -139,7 +139,7 @@ These functions simulate mouse interactions. Targets can be image strings, `Patt
 *   **Returns:** `1` if successful, `0` otherwise.
 *   **Example:**
     ```python
-    hover("menu_item.png") 
+    hover("menu_item.png")
     # often followed by another action like click() on a sub-menu item that appears
     ```
 
@@ -183,7 +183,7 @@ These functions simulate mouse interactions. Targets can be image strings, `Patt
 *   **Returns:** None.
 *   **Example:**
     ```python
-    mouseDown(Button.LEFT) 
+    mouseDown(Button.LEFT)
     # (usually followed by mouseMove and mouseUp)
     ```
 
@@ -208,7 +208,7 @@ These functions simulate mouse interactions. Targets can be image strings, `Patt
 *   **Example:**
     ```python
     # Assuming 'myRegion' is a Region object
-    myRegion.wheel(WHEEL_DOWN, 5) 
+    myRegion.wheel(WHEEL_DOWN, 5)
     Mouse.wheel(WHEEL_UP, 3) # Static version, acts at current mouse position
     ```
 
@@ -344,7 +344,7 @@ click(offset_target)
 
 # Alternative way to click with offset from match center
 button_match.setTargetOffset(0, -10)
-button_match.click() 
+button_match.click()
 ```
 
 ### Location Objects
@@ -488,14 +488,14 @@ SikuliX can launch, switch to, and close applications. You can work with `App` o
 *   `sleep(seconds)`: Pauses the script for the specified number of seconds. Can be a float for sub-second precision.
     ```python
     print "Waiting for 5 seconds..."
-    sleep(5) 
+    sleep(5)
     print "Done waiting."
     ```
 *   `exit(return_code=0)`: Stops the script immediately and returns the given `return_code` to the operating system or calling process.
     ```python
     if not exists("critical_element.png"):
         print "Critical element not found, exiting script."
-        exit(1) 
+        exit(1)
     ```
 
 ## User Interaction Dialogs
@@ -545,7 +545,7 @@ SikuliX provides functions to display simple dialogs for user interaction.
     username = input("Please enter your username:")
     if username:
         print "Username entered:", username
-    
+
     password = input("Enter password:", hidden=True)
     # Process password...
     ```
@@ -610,9 +610,9 @@ SikuliX scripts often rely on images. These functions help you manage where Siku
 *   **Example:**
     ```python
     # Add a subfolder named "icons" inside the script's bundle path
-    addImagePath(getBundlePath() + "/icons") 
+    addImagePath(getBundlePath() + "/icons")
     # Add a globally accessible image library
-    addImagePath("/Users/Shared/SikuliX_Images") 
+    addImagePath("/Users/Shared/SikuliX_Images")
     ```
 
 **`removeImagePath(path)`**

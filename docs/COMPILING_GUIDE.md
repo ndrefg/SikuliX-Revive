@@ -156,13 +156,13 @@ Replace `<version>` with the actual version string found in the `pom.xml` of the
 Once you have built a platform-specific IDE JAR, you can run it using Java:
 ```bash
 # Example for Windows (replace <version> appropriately)
-java -jar IDE/target/sikulixide-<version>-complete-win.jar 
+java -jar IDE/target/sikulixide-<version>-complete-win.jar
 
 # Example for macOS
 # java -jar IDE/target/sikulixide-<version>-complete-mac.jar
 
 # Example for Linux
-# java -jar IDE/target/sikulixide-<version>-complete-lux.jar 
+# java -jar IDE/target/sikulixide-<version>-complete-lux.jar
 ```
 Make sure you use the actual JAR file name generated in your `IDE/target/` directory.
 
